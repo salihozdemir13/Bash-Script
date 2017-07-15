@@ -3,4 +3,5 @@
 * IPTracker
 * Version 1.1
 
-1- Search IPs on the local network.
+1- Searching IPs on the local network.
+2- Reporting network activity to server admin by mailing
