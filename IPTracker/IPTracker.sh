@@ -3,7 +3,7 @@
 # Utility Functions Begin
 function sendMail
 {
-   numberOfFindedLines=$(grep -c '1' mail.txt) //here we go :) thats why this code just working on local server.
+   numberOfFindedLines=$(grep -c '1' mail.txt) #here we go :) thats why this code just working on local server.
    if [ "$numberOfFindedLines" != 0 ]
    then
        mail yourmailaddress@blabla.com < mail.txt -s "network activity" //subject your mail
@@ -19,7 +19,7 @@ function IPActivities #difference between first scan and second scan
    sendMail
 }
 
-function IPGenerate #IP Scans
+function IPGenerate #scanning
 {
    nmap -sP 192.168.47.0/24 | awk '/Host/{printf $2;}/MAC Address:/{print "-MAC:"$3;}/{printf""}/' | sort > $1
 
