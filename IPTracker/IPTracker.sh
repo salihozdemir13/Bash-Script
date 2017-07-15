@@ -3,10 +3,10 @@
 # Utility Functions Begin
 function sendMail
 {
-   numberOfFindedLines=$(grep -c '1' mail.txt)
+   numberOfFindedLines=$(grep -c '1' mail.txt) //here we go :) thats why this code just working on local server.
    if [ "$numberOfFindedLines" != 0 ]
    then
-       mail yourmailaddress@blabla.com < mail.txt -s "network activity"
+       mail yourmailaddress@blabla.com < mail.txt -s "network activity" //subject your mail
    fi
 }
 
