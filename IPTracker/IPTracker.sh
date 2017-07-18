@@ -6,7 +6,7 @@ function sendMail
    numberOfFindedLines=$(grep -c '1' mail.txt) #here we go :) thats why this code just working on local server.
    if [ "$numberOfFindedLines" != 0 ]
    then
-       mail yourmailaddress@blabla.com < mail.txt -s "network activity" //subject your mail
+       mail yourmailaddress@blabla.com < mail.txt -s "network activity" #subject for your mail
    fi
 }
 
