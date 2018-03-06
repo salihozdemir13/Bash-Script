@@ -53,7 +53,7 @@ function run
 ## Program Start Here
 
 #Checking NMAP
-nmap -sP 192.168.47.113 ||{ echo "nmap is not found..."
+nmap -sP 192.168.xxx.xxx ||{ echo "nmap is not found..."
    exit 1
 }
 
