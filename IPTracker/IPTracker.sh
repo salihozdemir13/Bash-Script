@@ -34,14 +34,12 @@ function firstRunCheckAndInit
 {
        if [ ! -f firstIPControl.txt ]
        then # if file does not exist
-
            > firstIPControl.txt
            > secondIPControl.txt
        fi
-
 }
 
-function run
+function runForest
 {
    IPGenerate secondIPControl.txt
    IPActivities
@@ -57,4 +55,4 @@ nmap -sP 192.168.xxx.xxx ||{ echo "nmap is not found..."
 }
 
 firstRunCheckAndInit
-run
+runForest
