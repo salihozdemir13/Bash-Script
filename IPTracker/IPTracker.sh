@@ -1,6 +1,16 @@
 #! /bin/bash
 
 # Utility Functions #
+
+function firstRunCheckAndInit
+{
+       if [ ! -f firstIPControl.txt ]
+       then # if file does not exist
+           > firstIPControl.txt
+           > secondIPControl.txt
+       fi
+}
+
 function sendMail
 {
    numberOfFindedLines=$(grep -c '1' mail.txt) # here we go :) thats why this code just working on local server.
@@ -30,21 +40,13 @@ function IPGenerate #scanning
    done < IPLib.txt
 }
 
-function firstRunCheckAndInit
-{
-       if [ ! -f firstIPControl.txt ]
-       then # if file does not exist
-           > firstIPControl.txt
-           > secondIPControl.txt
-       fi
-}
-
 function runForest
 {
    IPGenerate secondIPControl.txt
    IPActivities
    cat secondIPControl.txt > firstIPControl.txt
 }
+
 # Utility Functions #
 
 ## Program Start Here
