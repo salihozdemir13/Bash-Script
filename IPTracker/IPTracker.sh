@@ -21,7 +21,7 @@ function IPActivities # difference between first scan and second scan
 
 function IPGenerate #scanning
 {
-   nmap -sP 192.168.47.0/24 | awk '/Host/{printf $2;}/MAC Address:/{print "-MAC:"$3;}/{printf""}/' | sort > $1
+   nmap -sP 192.168.xxx.xxx/24 | awk '/Host/{printf $2;}/MAC Address:/{print "-MAC:"$3;}/{printf""}/' | sort > $1
 
    while read line  # Remove trusted IPs from scanned IP list
    do
