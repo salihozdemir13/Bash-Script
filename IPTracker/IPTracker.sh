@@ -1,6 +1,6 @@
 #! /bin/bash
 
-# Utility Functions #
+# Utility Functions Begin #
 
 function firstRunCheckAndInit
 {
@@ -47,9 +47,8 @@ function runForest
    cat secondIPControl.txt > firstIPControl.txt
 }
 
-# Utility Functions #
+# Utility Functions End #
 
-## Program Start Here
 
 # Checking NMAP
 nmap -sP 192.168.xxx.xxx ||{ echo "nmap is not found..."
